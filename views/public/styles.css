@@ -1,0 +1,153 @@
+/* Styles CSS */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5fa;
+    color: #333;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Header Section */
+  header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  header h1 {
+    font-size: 2.5rem;
+    color: #6a1b9a;
+    margin-bottom: 10px;
+  }
+  
+  header h2 {
+    font-size: 1.2rem;
+    color: #8e44ad;
+    font-weight: normal;
+  }
+  
+  /* Form Section */
+  .fetchpokemon {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    align-items: center;
+  }
+
+  .fetchpokemon input, .fetchpokemon select {
+    height: 40px; /* Makes input fields and select dropdown taller */
+    width: 80%;
+    max-width: 400px;
+    padding: 8px; /* Adds internal spacing for better appearance */
+    font-size: 1rem; /* Increases text size for readability */
+    border: 2px solid #ccc; /* Slightly thicker border for better visibility */
+    border-radius: 8px; /* Softer corners */
+    margin-bottom: 5px; /* Adds spacing between each field */
+    box-sizing: border-box;
+}
+  
+  button {
+    padding: 10px 15px;
+    font-size: 1.1rem;
+    background-color: #6a1b9a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #8e44ad;
+  }
+  
+  /* Pokemon Match Section */
+  .myPokemon {
+    background: white;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+    max-width: 600px;
+    margin: 30px auto 20px;
+  }
+  
+  .myPokemon img {
+    width: 256px;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    margin: 0 auto 0;
+  }
+  
+  .myPokemon h4 {
+    font-size: 1rem;
+    color:#564e64;
+    margin-bottom: 10px;
+  }
+  
+  .myPokemon h3 {
+    font-size: 1.1rem;
+    color: #564e64;
+    margin-bottom: 10px;
+    line-height: 1.6;
+    text-align: center; /* Keep the header centered */
+    font-weight: bold; /* Make it stand out */
+  }
+  
+  .myPokemon h2 {
+    font-size: 1.5rem;
+    color: #692cd481; /* Teal color for a fresh, modern look */
+    margin-bottom: 15px;
+    text-align: center; /* Keep the header centered */
+    font-weight: bold; /* Make it stand out */
+}
+  /* Display All Matches Section */
+  .displayPokemon {
+    text-align: center;
+  }
+  
+  .displayPokemon button {
+    margin-bottom: 20px;
+  }
+  
+  .displayGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+  }
+  
+  .displayGrid div {
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .displayGrid div img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    margin: 0 auto;
+    border-radius: 10px;
+  }
+  
+  .displayGrid div h3 {
+    font-size: 0.8rem;
+    color: #4c4949;
+  }
+  
+  .displayGrid div h3 strong {
+    color: #6a1b9a;
+    font-size: 1rem;
+  }
