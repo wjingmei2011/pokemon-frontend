@@ -1,7 +1,7 @@
 // define the state and front end logic, import react and other components as necessary
 import React, {useState, useEffect} from 'react';
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || 'http://localhost:3000';
+const BACKEND_URL = 'https://pokemon-backend-d2ye.onrender.com' || 'http://localhost:3000';
 
 export default function App () {
  // define the state: when the user enter their name the state is updated to the name; 
@@ -15,7 +15,7 @@ export default function App () {
 
 
 console.log("Current environment is: ", process.env.NODE_ENV);
-console.log("Backend URL:", process.env.REACT_APP_BACKEND_URL);
+console.log("Backend URL:", BACKEND_URL);
 
 // define the event handler
 const pokemonMatchHandler = async (e) => {
