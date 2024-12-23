@@ -33,7 +33,7 @@ export default {
         test: /\.css$/,
         use: ['style-loader', 'css-loader']
       },
-    ]
+    ],
   },
   resolve: {
     extensions: ['.js', '.jsx']
@@ -47,18 +47,18 @@ export default {
     new Dotenv(),
   ],
   devServer: {
-    static: './dist',
+    static: {
+      directory: path.join(__dirname, 'public'), // Serve static files from 'public'
+    },
     port: 8000,
     open: true,
-    proxy: process.env.NODE_ENV === 'development'?
-      [
+    proxy: 
         {
           context: ['/pokemon'],
           target: 'http://localhost:3000',
           changeOrigin: true,
           secure: false
         }
-      ]: undefined
   },
   mode: process.env.NODE_ENV || 'development'
 };

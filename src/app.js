@@ -11,8 +11,7 @@ export default function App () {
  const [allMatches, setAllMatches] = useState([]) ;
  const [isVisible, setIsVisible] = useState(false);
 
-const BACKEND_URL = 
-process.env.NODE_ENV === 'production'? process.env.REACT_APP_BACKEND_URL : 'http://localhost:3000';
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || 'http://localhost:3000';
 
 console.log("Current environment is: ", process.env.NODE_ENV);
 console.log("Backend URL:", process.env.REACT_APP_BACKEND_URL);
