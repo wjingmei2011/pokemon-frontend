@@ -43,7 +43,10 @@ export default {
         inject: true,
       }
     ),
-    new Dotenv()
+    new Dotenv(),
+    new webpack.DefinePlugin({
+      'process.env.REACT_APP_BACKEND_URL': JSON.stringify(process.env.REACT_APP_BACKEND_URL),
+    }),
   ],
   devServer: {
     static: './dist',
