@@ -3,6 +3,7 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import { fileURLToPath } from 'url';
 import Dotenv from 'dotenv-webpack';
 
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -44,9 +45,6 @@ export default {
       }
     ),
     new Dotenv(),
-    new webpack.DefinePlugin({
-      'process.env.REACT_APP_BACKEND_URL': JSON.stringify(process.env.REACT_APP_BACKEND_URL),
-    }),
   ],
   devServer: {
     static: './dist',
