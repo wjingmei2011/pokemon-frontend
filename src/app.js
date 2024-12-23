@@ -14,7 +14,8 @@ export default function App () {
 const BACKEND_URL = 
 process.env.NODE_ENV === 'production'? process.env.REACT_APP_BACKEND_URL : 'http://localhost:3000';
 
-console.log("Backend URL:", BACKEND_URL);
+console.log("Current environment is: ", process.env.NODE_ENV);
+console.log("Backend URL:", process.env.REACT_APP_BACKEND_URL);
 
 // define the event handler
 const pokemonMatchHandler = async (e) => {
