@@ -1,9 +1,13 @@
-const path = require('path');
-const htmlWebpackPlugin = require('html-webpack-plugin');
+import path from 'path';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import { fileURLToPath } from 'url';
+import Dotenv from 'dotenv-webpack';
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-module.exports = {
-  entry: './src/views/index.js',
+export default {
+  entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
@@ -23,7 +27,7 @@ module.exports = {
             ]
           }
         }
-      },
+      },  
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader']
@@ -34,11 +38,12 @@ module.exports = {
     extensions: ['.js', '.jsx']
   },
   plugins: [
-    new htmlWebpackPlugin(
-      { template: './src/views/public/index.html',
+    new HtmlWebpackPlugin(
+      { template: './public/index.html',
         inject: true,
       }
-    )
+    ),
+    new Dotenv()
   ],
   devServer: {
     static: './dist',
