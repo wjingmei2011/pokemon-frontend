@@ -46,19 +46,22 @@ export default {
     ),
     new Dotenv(),
   ],
-  devServer: {
+  devServer: 
+  {
     static: {
       directory: path.join(__dirname, 'public'), // Serve static files from 'public'
     },
     port: 8000,
     open: true,
     proxy: 
+      [
         {
           context: ['/pokemon'],
           target: 'http://localhost:3000',
           changeOrigin: true,
           secure: false
         }
+      ]
   },
   mode: process.env.NODE_ENV || 'development'
 };
